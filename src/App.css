@@ -1,0 +1,7 @@
+body, HTML {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #535bf2;
+    background-image: url("./assets/sfondo.jpg");
+}

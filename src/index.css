@@ -1,0 +1,116 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /*background-image: url("./assets/sfondo.jpg");
+  background-size: 100% 100%; /* Modifica questa linea
+  background-repeat: no-repeat;*/
+}
+
+
+h1 {
+  font-size: 40px; /* Imposta la dimensione del font a tuo piacimento */
+  background-image: linear-gradient(to right, #FF5733, #FFBD33); /* Imposta i colori del gradiente */
+  -webkit-background-clip: text; /* Imposta il clip del gradiente al testo */
+  background-clip: text; /* Imposta il clip del gradiente al testo */
+  color: transparent;
+  line-height: 1.1;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.20);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.25s;
+  color: inherit;
+
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+input, label {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.20);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+  border: 2px solid transparent;
+  transition: border-color 0.25s;
+  color: inherit;
+}
+
+input:hover, label:hover {
+  border-color: #646cff;
+}
+
+input:focus, label:focus,
+input:focus-visible, label:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.testocolorato{
+    font-size: 40px; /* Imposta la dimensione del font a tuo piacimento */
+    background-image: linear-gradient(to right, #FF5733, #FFBD33); /* Imposta i colori del gradiente */
+    -webkit-background-clip: text; /* Imposta il clip del gradiente al testo */
+    background-clip: text; /* Imposta il clip del gradiente al testo */
+    color: transparent;
+}
