@@ -8,7 +8,14 @@
 }
 
 .nomepulsa{
-    color:white;
+
+    background-image: linear-gradient(to right, #FF5733, #FFBD33); /* Imposta i colori del gradiente */
+    -webkit-background-clip: text; /* Imposta il clip del gradiente al testo */
+    background-clip: text; /* Imposta il clip del gradiente al testo */
+    color: transparent;
+    font-size: 3rem;
+    padding: 0;
+    line-height:1.1;
 }
 .punteggio{
     background-image: linear-gradient(to right, #FF5733, #FFBD33); /* Imposta i colori del gradiente */
@@ -17,6 +24,7 @@
     color: transparent;
     font-size: 3rem;
     padding: 0;
+    margin-top: 15px;
 }
 
 .pulsanti{
@@ -33,7 +41,7 @@
     margin-bottom: 20px;
 }
 .avvia{
-    margin-top :40px;
+    margin-top :0px;
     padding: 15px 90px;
 
 }
@@ -46,10 +54,12 @@
 }
 .più{
     padding: 20px 30px;
+    font-size: 1.5rem;
     color: limegreen;
 }
 .meno{
     padding: 20px 30px;
+    font-size: 1.5rem;
     color: orangered;
 }
 .modal {
@@ -59,7 +69,6 @@
     width: 100%;
     height: 100%;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
     backdrop-filter: blur(7.2px);
     -webkit-backdrop-filter: blur(7.2px);
     display: flex;
@@ -68,10 +77,11 @@
 }
 
 .modal-content {
-    background: white;
+    background: #1a1a1a;
     position: relative;
     padding: 20px;
     border-radius: 10px;
+
 }
 .lables{
     display: flex;
@@ -92,12 +102,12 @@ label {
     margin: 10px;
     border-radius: 10px;
     width: 100px; /* Assegna una larghezza fissa */
-    background-color: #f0f0f0; /* Cambia il colore di sfondo */
-    color: #333; /* Cambia il colore del testo */
+    background-color:  transparent; /* Cambia il colore di sfondo */
+    color: rgba(255,255,255, 0.6); /* Cambia il colore del testo */
 
 }
 .desc{
-    color: black;
+    color: rgba(255,255,255, 0.6);;
 }
 .allineamento{
     display: flex;
@@ -105,6 +115,8 @@ label {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-top: 10px;
+    background-color: transparent;
 }
 .chiudi{
     position: absolute ;
@@ -116,15 +128,13 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
-    margin-top: 5px;
+    color: limegreen;
     margin-bottom: -10px;
 }
 .parola {
     width: 80vw;
     max-height: 7vh;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.20);
+    background: transparent;
     border-radius: 10px;
     backdrop-filter: blur(7.2px);
     -webkit-backdrop-filter: blur(7.2px);
@@ -133,12 +143,14 @@ label {
     display: flex; /* Aggiunto */
     justify-content: center; /* Aggiunto */
     align-items: center; /* Aggiunto */
+    box-shadow:   inset 5px 5px 5px #1a1a1a,
+    inset -5px -5px 5px #2d2d2d;
 }
 
 .parola p {
     font-size: 30px;
     font-weight: bolder;
-    color: #242424;
+    color: rgba(255, 255, 255, 0.7);
 }
 .passoterminati{
     color: orangered;

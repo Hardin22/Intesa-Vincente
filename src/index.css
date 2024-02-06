@@ -28,9 +28,8 @@ body {
   place-items: center;
   min-height: 100vh;
   width: 100%;
-  background: #360033;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #242424;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: rgba(255, 255, 255, 0.8);
 
   /*background-image: url("./assets/sfondo.jpg");
   background-size: 100% 100%; /* Modifica questa linea
@@ -45,27 +44,28 @@ h1 {
   background-clip: text; /* Imposta il clip del gradiente al testo */
   color: transparent;
   line-height: 1.1;
+
 }
 
 button {
-  padding: 0.6em 1.2em;
+  padding: 1em 1.4em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background: rgba(255, 255, 255, 0.20);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(7.2px);
-  -webkit-backdrop-filter: blur(7.2px);
+
+  border-radius: 20px;
+  box-shadow:   inset 5px 5px 5px #1a1a1a,
+  inset -5px -5px 5px #2d2d2d;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   transition: border-color 0.25s;
-  color: inherit;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgba(255, 255, 255, 0.6);
 
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -93,18 +93,21 @@ input, label {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.2px);
   -webkit-backdrop-filter: blur(7.2px);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   transition: border-color 0.25s;
   color: inherit;
 }
 
-input:hover, label:hover {
-  border-color: #646cff;
+input:hover, label:hover{
+  border: 1px rgba(255, 255, 255, 0.6) solid;
 }
-
+button:hover{
+  background-image: linear-gradient(to right, blue, fuchsia);
+  border: 1px rgba(255, 255, 255, 0.6) solid;
+}
 input:focus, label:focus,
 input:focus-visible, label:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 1px rgba(255, 255, 255, 0.6) solid;
 }
 
 .testocolorato{
@@ -113,4 +116,10 @@ input:focus-visible, label:focus-visible {
     -webkit-background-clip: text; /* Imposta il clip del gradiente al testo */
     background-clip: text; /* Imposta il clip del gradiente al testo */
     color: transparent;
+}
+.countpasso{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
 }

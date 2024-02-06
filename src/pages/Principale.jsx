@@ -30,19 +30,16 @@ function Principale({ gameCode }) {
     }, [gameCode, db]);
 
     const handlePassoClick = () => {
-        const gameRef = ref(db, `partite/${gameCode}`);
+        const gameRef = ref(db, `partite/${gameCode}/timerStatus`);
 
         // Ottieni il valore attuale di passo e decrementalo
-        onValue(gameRef, (snapshot) => {
-            const gameData = snapshot.val();
-            const currentPasso = gameData.passo;
+        onValue(ref(db, `partite/${gameCode}/passo`), (snapshot) => {
+            const currentPasso = snapshot.val();
             const newPasso = currentPasso > 0 ? currentPasso - 1 : currentPasso; // Evita di andare sotto 0
 
             // Aggiorna sia passo che timerStatus in un'unica operazione
-            update(gameRef, {
-                passo: newPasso,
-                timerStatus: "stop"
-            });
+            update(ref(db, `partite/${gameCode}`), { passo: newPasso });
+            update(gameRef, { timerStatus: "stop" });
         }, { onlyOnce: true });
     };
 

@@ -19,7 +19,8 @@ function Passo({ gameCode }) {
 
     return (
         <div>
-            <p>{passo}</p>
+
+            <p className="countpasso">Passo: {passo}</p>
         </div>
     );
 }

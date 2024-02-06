@@ -12,6 +12,7 @@ function Pulsantiera({ gameCode }) {
     const [formValues, setFormValues] = useState({ passo: 3, seconds: 60 });
     const [punteggio, setPunteggio] = useState(0);
 
+
     const incrementa = () => {
         setPunteggio(punteggio + 1);
         update(ref(db, `partite/${gameCode}`), { punteggio: punteggio + 1 });
@@ -32,7 +33,8 @@ function Pulsantiera({ gameCode }) {
     }
 
     function reset() {
-        update(ref(db, `partite/${gameCode}`), { tempo: formValues.seconds, passo: formValues.passo });
+        setPunteggio(0);
+        update(ref(db, `partite/${gameCode}`), { tempo: formValues.seconds, passo: formValues.passo, punteggio: 0 });
     }
 
     function handleFormSubmit(event) {
@@ -90,8 +92,8 @@ function Pulsantiera({ gameCode }) {
                                     </label>
                                 </div>
                             </div>
-                            <div className="salva">
-                                <button type="submit">Salva</button>
+                            <div className="centro">
+                                <button className="salva" type="submit">Salva</button>
                             </div>
                         </form>
                     </div>
