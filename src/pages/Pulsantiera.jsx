@@ -51,6 +51,7 @@ function Pulsantiera({ gameCode }) {
     const generateAndSetWord = () => {
         const newWord = generateWord();
         update(ref(db, `partite/${gameCode}`), { parola: newWord });
+        return newWord; // Restituisci la nuova parola
     };
 
     return (
@@ -64,8 +65,7 @@ function Pulsantiera({ gameCode }) {
             </div>
             <div className="divisore"></div>
             <div className="pulsanti">
-                <Cronometro gameCode={gameCode} onWordGenerated={generateAndSetWord} />
-                <Passo gameCode={gameCode} />
+                <Cronometro gameCode={gameCode} onWordGenerated={generateAndSetWord} currentWord={generateAndSetWord()} />                <Passo gameCode={gameCode} />
                 <div className="piùmeno">
                     <button className="meno" onClick={decrementa}>-</button>
                     <Secondi gameCode={gameCode} />

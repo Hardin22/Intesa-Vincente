@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './components.css';
 function Authentication({ onAuthenticated }) {
     const [password, setPassword] = useState('');
-    const SECRET_PASSWORD = '5uc4m1nchi@_!';
+    const SECRET_PASSWORD = '';
 
     const handleSubmit = (e) => {
         e.preventDefault();

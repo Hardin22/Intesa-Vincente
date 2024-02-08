@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getDatabase, ref, onValue, update } from 'firebase/database';
-import { generateWord } from './Generaparola';
 
-export default function Cronometro({ gameCode, onWordGenerated }) {
+export default function Cronometro({ gameCode, onWordGenerated, currentWord }) {
     const db = getDatabase();
     const [seconds, setSeconds] = useState(60);
     const [timerStatus, setTimerStatus] = useState('stop');
@@ -13,8 +12,7 @@ export default function Cronometro({ gameCode, onWordGenerated }) {
         update(statusRef, { timerStatus: newStatus });
 
         if (newStatus === 'active') {
-            const newWord = generateWord();
-            onWordGenerated(newWord);
+            onWordGenerated(currentWord); // Usa la parola passata come prop
         }
     };
 
